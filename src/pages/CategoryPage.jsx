@@ -59,7 +59,7 @@ export default function CategoryPage() {
             <h1 className="text-xl font-bold text-slate-900">{category.name}</h1>
           </div>
           <p className="text-xs text-slate-500 mt-1 max-w-2xl leading-relaxed">
-            {category.description}
+            {category.description || "Browse all available visiting card specifications, GSM grades, and custom finishing options."}
           </p>
         </div>
 
@@ -87,10 +87,11 @@ export default function CategoryPage() {
         <div className="space-y-10">
           {(() => {
             const preferredOrder = [
-              "500 GSM + VELVET CARDS (QTY. 500 CARDS)",
-              "500 GSM + MATT CARDS (QTY. 500 CARDS)",
-              "NT / PVC VISITING CARDS (QTY 100, 500 & 1000 CARDS)",
+              "500 GSM CARDS (QTY. 500 CARDS)",
+              "400 GSM CARDS (QTY. 1000 CARDS)",
+              "350 GSM CARDS (QTY. 1000 CARDS)",
               "REGULAR VISITING CARDS (QTY. 1000 CARDS)",
+              "NT / PVC VISITING CARDS (QTY. 100, 500 & 1000 CARDS)",
               "METAL VISITING CARDS (QTY. 10 CARDS)"
             ];
 
@@ -107,24 +108,26 @@ export default function CategoryPage() {
             return entries.map(([subCategoryName, prods]) => {
               let titleColor = "text-blue-800";
               let borderColor = "border-blue-600";
-              let gridCols = "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4";
+              let gridCols = "grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6";
 
               if (subCategoryName.includes("500 GSM")) {
-                titleColor = "text-amber-600";
-                borderColor = "border-amber-500";
-                gridCols = "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6";
-              } else if (subCategoryName.includes("NT / PVC")) {
-                titleColor = "text-emerald-700";
-                borderColor = "border-emerald-600";
-                gridCols = "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6";
+                titleColor = "text-[#D97706]";
+                borderColor = "border-[#D97706]";
+              } else if (subCategoryName.includes("400 GSM")) {
+                titleColor = "text-[#1E40AF]";
+                borderColor = "border-[#1E40AF]";
+              } else if (subCategoryName.includes("350 GSM")) {
+                titleColor = "text-[#0284C7]";
+                borderColor = "border-[#0284C7]";
               } else if (subCategoryName.includes("REGULAR")) {
                 titleColor = "text-[#BE185D]";
                 borderColor = "border-[#BE185D]";
-                gridCols = "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6";
+              } else if (subCategoryName.includes("NT / PVC")) {
+                titleColor = "text-[#15803D]";
+                borderColor = "border-[#15803D]";
               } else if (subCategoryName.includes("METAL")) {
-                titleColor = "text-red-600";
-                borderColor = "border-red-600";
-                gridCols = "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6";
+                titleColor = "text-[#DC2626]";
+                borderColor = "border-[#DC2626]";
               }
 
               return (

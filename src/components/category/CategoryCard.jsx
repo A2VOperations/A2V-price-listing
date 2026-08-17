@@ -22,15 +22,12 @@ export default function CategoryCard({ category }) {
       {/* Card Content */}
       <div className="p-4 flex-1 flex flex-col justify-between">
         <div>
-          <h3 className="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors line-clamp-1">
+          <h3 className=" pb-2 text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors line-clamp-1">
             {category.name}
           </h3>
-          <p className="text-xs text-slate-500 mt-1 line-clamp-2 leading-relaxed">
-            {category.description}
-          </p>
         </div>
 
-        <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-blue-600 group-hover:text-blue-700">
+        <div className="pt-3 border-t border-slate-200 flex items-center justify-between text-xs font-bold text-blue-600 group-hover:text-blue-700">
           <span>View Products</span>
           <FiArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
         </div>

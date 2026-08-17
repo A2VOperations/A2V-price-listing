@@ -7,7 +7,7 @@ import { useQuote } from "@/context/QuoteContext";
 export default function ProductCard({ product }) {
   const { customPrices } = useQuote();
 
-  // Render stylized card if cardDisplay metadata exists (Image 1 style)
+  // Render stylized card if cardDisplay metadata exists (Image sample board style)
   if (product.cardDisplay) {
     const {
       headerTitle,
@@ -26,52 +26,34 @@ export default function ProductCard({ product }) {
 
     const themeStyles = {
       amber: {
-        header: "bg-amber-600 text-white border-amber-700",
+        header: "bg-[#D97706] text-white border-[#B45309]",
         badge: "bg-red-600 text-white",
-        code: "text-amber-800",
-        uv: "text-amber-700",
-        foil: "text-amber-700",
-        die: "text-amber-700",
-      },
-      green: {
-        header: "bg-emerald-700 text-white border-emerald-800",
-        badge: "bg-rose-600 text-white",
-        code: "text-emerald-900",
-        uv: "text-emerald-700",
-        foil: "text-emerald-700",
-        die: "text-emerald-700",
-      },
-      pink: {
-        header: "bg-[#BE185D] text-white border-pink-800",
-        badge: "bg-amber-500 text-slate-900",
-        code: "text-pink-900",
-        uv: "text-pink-700",
-        foil: "text-pink-700",
-        die: "text-pink-700",
-      },
-      red: {
-        header: "bg-red-700 text-white border-red-800",
-        badge: "bg-yellow-400 text-black",
-        code: "text-red-900",
-        uv: "text-red-700",
-        foil: "text-red-700",
-        die: "text-red-700",
+        code: "text-[#B45309]",
       },
       blue: {
-        header: "bg-amber-600 text-white border-amber-700",
+        header: "bg-[#1E40AF] text-white border-[#1E3A8A]",
         badge: "bg-red-600 text-white",
-        code: "text-amber-900",
-        uv: "text-blue-700",
-        foil: "text-amber-700",
-        die: "text-cyan-800",
+        code: "text-[#1E40AF]",
       },
-      metal: {
-        header: "bg-red-700 text-white border-red-800",
-        badge: "bg-amber-400 text-black",
-        code: "text-slate-900",
-        uv: "text-slate-700",
-        foil: "text-slate-700",
-        die: "text-slate-700",
+      cyan: {
+        header: "bg-[#0284C7] text-white border-[#0369A1]",
+        badge: "bg-amber-500 text-slate-900",
+        code: "text-[#0284C7]",
+      },
+      pink: {
+        header: "bg-[#BE185D] text-white border-[#9D174D]",
+        badge: "bg-amber-500 text-slate-900",
+        code: "text-[#BE185D]",
+      },
+      green: {
+        header: "bg-[#15803D] text-white border-[#166534]",
+        badge: "bg-rose-600 text-white",
+        code: "text-[#15803D]",
+      },
+      red: {
+        header: "bg-[#DC2626] text-white border-[#B91C1C]",
+        badge: "bg-yellow-400 text-black",
+        code: "text-[#DC2626]",
       },
     };
 
@@ -80,16 +62,16 @@ export default function ProductCard({ product }) {
     return (
       <Link
         to={`/product/${product.slug}`}
-        className="group bg-white rounded-lg border border-slate-200/90 shadow-2xs hover:shadow-md hover:border-slate-400 transition-all duration-200 flex flex-col overflow-hidden text-center p-3 select-none cursor-pointer h-full"
+        className="group bg-white rounded-lg border border-slate-200/90 shadow-2xs hover:shadow-md hover:border-slate-400 transition-all duration-200 flex flex-col overflow-hidden text-center p-2.5 select-none cursor-pointer h-full"
       >
         {/* Top Graphic Solid Square Block Header */}
         <div
-          className={`relative h-28 w-full rounded-md ${currentTheme.header} flex items-center justify-center p-2.5 shadow-xs border overflow-hidden`}
+          className={`relative h-28 w-full rounded-md ${currentTheme.header} flex items-center justify-center p-2 shadow-xs border overflow-hidden`}
         >
           {/* Subtle sheen */}
           <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent pointer-events-none" />
 
-          {/* Badge Ribbon (e.g. Coming Soon) */}
+          {/* Badge Ribbon */}
           {badge && (
             <div className="absolute top-2 -right-8 bg-red-600 text-white font-extrabold text-[8px] px-8 py-0.5 transform rotate-45 shadow-xs uppercase tracking-wider z-10">
               {badge}
@@ -101,35 +83,33 @@ export default function ProductCard({ product }) {
           </h3>
         </div>
 
-        {/* Card Spec Details List (Sample board spec layout) */}
-        <div className="mt-2.5 space-y-1 text-center text-[10px] sm:text-[11px] leading-snug text-slate-700 flex-1 flex flex-col justify-between">
+        {/* Card Spec Details List */}
+        <div className="mt-2 space-y-0.5 text-center text-[10px] sm:text-[11px] leading-tight text-slate-700 flex-1 flex flex-col justify-between">
           <div className="space-y-0.5">
-            <div className={`font-black text-xs ${currentTheme.code}`}>
+            <div className={`font-black text-[11px] sm:text-xs mb-0.5 ${currentTheme.code}`}>
               {productCodeDisplay || `Product Code: ${product.code}`}
             </div>
 
             {laminationType && (
-              <div className="text-slate-700 font-medium">{laminationType}</div>
+              <div className="text-slate-600 font-normal leading-tight">{laminationType}</div>
             )}
             {uvOption && (
-              <div className="text-slate-600 font-medium">{uvOption}</div>
+              <div className="text-slate-600 font-normal leading-tight">{uvOption}</div>
             )}
             {foilOption && (
-              <div className="text-slate-600 font-medium">{foilOption}</div>
+              <div className="text-slate-600 font-normal leading-tight">{foilOption}</div>
             )}
             {dieCutOption && (
-              <div className="text-slate-600 font-medium">{dieCutOption}</div>
+              <div className="text-slate-600 font-normal leading-tight">{dieCutOption}</div>
             )}
             {textureOption && (
-              <div className="text-slate-600 font-medium">{textureOption}</div>
+              <div className="text-slate-600 font-normal leading-tight">{textureOption}</div>
             )}
             {customizedDieCut && (
-              <div className="text-slate-600 font-medium">
-                {customizedDieCut}
-              </div>
+              <div className="text-slate-600 font-normal leading-tight">{customizedDieCut}</div>
             )}
             {productionTimeDisplay && (
-              <div className="text-slate-500 font-semibold pt-0.5">
+              <div className="text-slate-500 font-normal pt-0.5 leading-tight">
                 {productionTimeDisplay}
               </div>
             )}
@@ -140,14 +120,6 @@ export default function ProductCard({ product }) {
               {extraNote}
             </p>
           )}
-
-          <div className="pt-2 border-t border-slate-100 mt-2">
-            <div className="flex items-center justify-between text-xs">
-              <span className="inline-flex items-center text-blue-600 font-extrabold group-hover:translate-x-0.5 transition-transform text-[11px]">
-                Configure →
-              </span>
-            </div>
-          </div>
         </div>
       </Link>
     );
