@@ -12,6 +12,7 @@ import { stickers } from "./products/stickers";
 import { pens } from "./products/pens";
 import { shootingTargets } from "./products/shootingTargets";
 import { sampleFiles } from "./products/sampleFiles";
+import { flexBoardProducts } from "./products/flexBoard";
 
 export {
   visitingCards,
@@ -28,9 +29,11 @@ export {
   pens,
   shootingTargets,
   sampleFiles,
+  flexBoardProducts,
 };
 
 export const products = [
+  ...flexBoardProducts,
   ...visitingCards,
   ...cardHolders,
   ...pamphlets,

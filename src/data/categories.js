@@ -15,6 +15,13 @@ import sampleFiles from "../assets/images/categories (10).webp";
 
 export const categories = [
   {
+    id: "flex-board",
+    slug: "flex-board",
+    name: "Flex Board",
+    image: stacked_poster,
+    description: "Custom Flex Board printing & framing calculator with Iron/Wooden structure options, support rods & installation.",
+  },
+  {
     id: "visiting-cards",
     slug: "visiting-cards",
     name: "Visiting Cards",

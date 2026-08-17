@@ -2,12 +2,16 @@ import React, { useState, useEffect } from "react";
 import { FiPackage, FiLayers, FiCheck } from "react-icons/fi";
 import { useQuote } from "@/context/QuoteContext";
 import { calculateProductPrice } from "@/lib/priceCalculator";
+import FlexBoardOrderForm from "./FlexBoardOrderForm";
 
 export default function ProductOrderForm({
   product,
   customBasePrice,
   onVariantSelect,
 }) {
+  if (product?.isFlexBoard || product?.categoryId === "flex-board") {
+    return <FlexBoardOrderForm product={product} onVariantSelect={onVariantSelect} />;
+  }
   const { addToQuote } = useQuote();
 
   const [selectedVariant, setSelectedVariant] = useState("");
