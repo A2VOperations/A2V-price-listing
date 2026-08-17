@@ -140,11 +140,15 @@ export default function ProductCard({ product }) {
           <span className="text-blue-400">#</span>
           {product.code}
         </div>
-        {customPrices[product.id] !== undefined && (
+        {product.badge ? (
+          <div className="absolute top-2.5 right-2.5 bg-red-600 text-white text-[10px] font-extrabold px-2 py-0.5 rounded-full shadow-xs uppercase tracking-wider">
+            {product.badge}
+          </div>
+        ) : customPrices[product.id] !== undefined ? (
           <div className="absolute top-2.5 right-2.5 bg-amber-500 text-slate-950 text-[10px] font-extrabold px-1.5 py-0.5 rounded shadow-xs uppercase tracking-wider">
             Custom Price
           </div>
-        )}
+        ) : null}
       </div>
 
       {/* Card Details */}
