@@ -93,18 +93,6 @@ export const categories = [
     name: "Pens",
     image: pens,
   },
-  {
-    id: "shooting-targets",
-    slug: "shooting-targets",
-    name: "Shooting Targets",
-    image: shootingTarget,
-  },
-  {
-    id: "sample-files",
-    slug: "sample-files",
-    name: "Sample Files",
-    image: sampleFiles,
-  },
 ];
 
 export function getCategoryBySlug(slug) {

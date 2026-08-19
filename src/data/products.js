@@ -10,8 +10,6 @@ import { atmPouches } from "./products/atmPouches";
 import { billBooks } from "./products/billBooks";
 import { stickers } from "./products/stickers";
 import { pens } from "./products/pens";
-import { shootingTargets } from "./products/shootingTargets";
-import { sampleFiles } from "./products/sampleFiles";
 import { flexBoardProducts } from "./products/flexBoard";
 
 export {
@@ -27,8 +25,7 @@ export {
   billBooks,
   stickers,
   pens,
-  shootingTargets,
-  sampleFiles,
+ 
   flexBoardProducts,
 };
 
@@ -46,8 +43,7 @@ export const products = [
   ...billBooks,
   ...stickers,
   ...pens,
-  ...shootingTargets,
-  ...sampleFiles,
+ 
 ];
 
 export function getProductBySlug(slug) {

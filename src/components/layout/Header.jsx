@@ -30,9 +30,7 @@ export default function Header({ onToggleMobileSidebar }) {
               <div>
                 <div className="text-base font-extrabold tracking-tight text-white flex items-center gap-1.5">
                   A2V PRINTS
-                  <span className="text-[10px] font-semibold bg-blue-500/20 text-blue-300 border border-blue-400/30 px-1.5 py-0.2 rounded uppercase tracking-wider">Sales Tool</span>
                 </div>
-                <div className="text-[10px] text-slate-400 font-medium">Product & Price Reference System</div>
               </div>
             </Link>
           </div>
