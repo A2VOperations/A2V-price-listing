@@ -1,4 +1,3 @@
-import { commonOptions } from "../options";
 import digitalPaperImg from "../../assets/images/categories (1).webp";
 
 export const digitalPaper = [
@@ -1358,7 +1357,7 @@ export const digitalPaper = [
           },
         ],
       },
-      commonOptions.fileOption,
+      
     ],
   },
 ];

@@ -1,4 +1,4 @@
-import { commonOptions } from "../options";
+
 import stickersImg from "../../assets/images/categories (9).webp";
 
 export const stickers = [

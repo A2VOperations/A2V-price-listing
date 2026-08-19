@@ -83,7 +83,16 @@ export const visitingCards = [
           "Lamination Type": "Velvet",
         },
         options: [
-          commonOptions.printing,
+          {
+            id: "printing",
+            name: "Printing",
+            type: "select",
+            required: true,
+            values: [
+              { label: "Both Side", priceAdjustment: 200 },
+              { label: "Front Side", priceAdjustment: 0 },
+            ],
+          },
           {
             id: "dieCut",
             name: "Die Cut",
@@ -130,7 +139,16 @@ export const visitingCards = [
           "Eco-Friendly Printing: Sustainable processes that are gentle on the environment.",
         ],
         options: [
-          commonOptions.printing,
+          {
+            id: "printing",
+            name: "Printing",
+            type: "select",
+            required: true,
+            values: [
+              { label: "Both Side", priceAdjustment: 200 },
+              { label: "Front Side", priceAdjustment: 0 },
+            ],
+          },
           {
             id: "uvEffect",
             name: "Spot UV",
@@ -188,7 +206,16 @@ export const visitingCards = [
           "Eco-Friendly Printing: Sustainable processes that are gentle on the environment.",
         ],
         options: [
-          commonOptions.printing,
+          {
+            id: "printing",
+            name: "Printing",
+            type: "select",
+            required: true,
+            values: [
+              { label: "Both Side", priceAdjustment: 200 },
+              { label: "Front Side", priceAdjustment: 0 },
+            ],
+          },
           {
             id: "foil",
             name: "Foil",
@@ -259,7 +286,16 @@ export const visitingCards = [
           "Eco-Friendly Printing: Sustainable processes that are gentle on the environment.",
         ],
         options: [
-          commonOptions.printing,
+          {
+            id: "printing",
+            name: "Printing",
+            type: "select",
+            required: true,
+            values: [
+              { label: "Both Side", priceAdjustment: 200 },
+              { label: "Front Side", priceAdjustment: 0 },
+            ],
+          },
           {
             id: "uvEffect",
             name: "Spot UV",
@@ -341,7 +377,16 @@ export const visitingCards = [
           "Eco-Friendly Printing: Sustainable processes that are gentle on the environment.",
         ],
         options: [
-          commonOptions.printing,
+          {
+            id: "printing",
+            name: "Printing",
+            type: "select",
+            required: true,
+            values: [
+              { label: "Both Side", priceAdjustment: 200 },
+              { label: "Front Side", priceAdjustment: 0 },
+            ],
+          },
           {
             id: "uvEffect",
             name: "Spot UV",
@@ -414,7 +459,16 @@ export const visitingCards = [
       minDpi: 300,
     },
     options: [
-      commonOptions.printing,
+      {
+        id: "printing",
+        name: "Printing",
+        type: "select",
+        required: true,
+        values: [
+          { label: "Both Side", priceAdjustment: 200 },
+          { label: "Front Side", priceAdjustment: 0 },
+        ],
+      },
       {
         id: "dieCut",
         name: "Die Cut",
@@ -515,7 +569,16 @@ export const visitingCards = [
           "Eco-Friendly Printing: Sustainable processes that are gentle on the environment.",
         ],
         options: [
-          commonOptions.printing,
+          {
+            id: "printing",
+            name: "Printing",
+            type: "select",
+            required: true,
+            values: [
+              { label: "Both Side", priceAdjustment: 200 },
+              { label: "Front Side", priceAdjustment: 0 },
+            ],
+          },
           {
             id: "uvEffect",
             name: "Spot UV",
@@ -573,7 +636,16 @@ export const visitingCards = [
           "Eco-Friendly Printing: Sustainable processes that are gentle on the environment.",
         ],
         options: [
-          commonOptions.printing,
+          {
+            id: "printing",
+            name: "Printing",
+            type: "select",
+            required: true,
+            values: [
+              { label: "Both Side", priceAdjustment: 200 },
+              { label: "Front Side", priceAdjustment: 0 },
+            ],
+          },
           {
             id: "foil",
             name: "Foil",
@@ -644,7 +716,16 @@ export const visitingCards = [
           "Eco-Friendly Printing: Sustainable processes that are gentle on the environment.",
         ],
         options: [
-          commonOptions.printing,
+          {
+            id: "printing",
+            name: "Printing",
+            type: "select",
+            required: true,
+            values: [
+              { label: "Both Side", priceAdjustment: 200 },
+              { label: "Front Side", priceAdjustment: 0 },
+            ],
+          },
           {
             id: "uvEffect",
             name: "Spot UV",
@@ -1032,7 +1113,16 @@ export const visitingCards = [
       finalSize: "W: 90.00 mm x H: 53.00 mm",
     },
     options: [
-      commonOptions.printing,
+      {
+        id: "printing",
+        name: "Printing",
+        type: "select",
+        required: true,
+        values: [
+          { label: "Both Side", priceAdjustment: 200 },
+          { label: "Front Side", priceAdjustment: 0 },
+        ],
+      },
       {
         id: "texture",
         name: "Texture Pattern",
@@ -1555,7 +1645,16 @@ export const visitingCards = [
           "Designed to create a premium and memorable first impression.",
         ],
         options: [
-          commonOptions.printing,
+          {
+            id: "printing",
+            name: "Printing",
+            type: "select",
+            required: true,
+            values: [
+              { label: "Both Side", priceAdjustment: 200 },
+              { label: "Front Side", priceAdjustment: 0 },
+            ],
+          },
           {
             id: "uvEffect",
             name: "Spot UV",
@@ -1624,7 +1723,16 @@ export const visitingCards = [
           "Designed to create a premium and memorable first impression.",
         ],
         options: [
-          commonOptions.printing,
+          {
+            id: "printing",
+            name: "Printing",
+            type: "select",
+            required: true,
+            values: [
+              { label: "Both Side", priceAdjustment: 200 },
+              { label: "Front Side", priceAdjustment: 0 },
+            ],
+          },
           {
             id: "uvEffect",
             name: "Spot UV",
@@ -1910,7 +2018,16 @@ export const visitingCards = [
           "Lamination Type": "N/A",
         },
         options: [
-          commonOptions.printing,
+          {
+            id: "printing",
+            name: "Printing",
+            type: "select",
+            required: true,
+            values: [
+              { label: "Both Side", priceAdjustment: 200 },
+              { label: "Front Side", priceAdjustment: 0 },
+            ],
+          },
           {
             id: "uvEffect",
             name: "Gloss Area",

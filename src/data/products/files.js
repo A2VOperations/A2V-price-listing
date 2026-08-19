@@ -1,4 +1,3 @@
-import { commonOptions } from "../options";
 
 export const files = [
   {

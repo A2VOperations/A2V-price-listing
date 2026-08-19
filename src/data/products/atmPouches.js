@@ -1,4 +1,3 @@
-import { commonOptions } from "../options";
 import atmPouchImg from "../../assets/images/categories (3).webp";
 
 export const atmPouches = [

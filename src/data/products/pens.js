@@ -1,4 +1,3 @@
-import { commonOptions } from "../options";
 import pensImg from "../../assets/images/categories (4).webp";
 
 export const pens = [

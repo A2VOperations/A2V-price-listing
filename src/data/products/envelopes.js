@@ -1,4 +1,3 @@
-import { commonOptions } from "../options";
 import envelopesImg from "../../assets/images/images.jpg";
 
 export const envelopes = [
