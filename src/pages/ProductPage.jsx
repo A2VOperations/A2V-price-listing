@@ -69,9 +69,9 @@ export default function ProductPage() {
     <div className="space-y-6">
       <Breadcrumb items={breadcrumbItems} />
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 lg:gap-8 items-start">
         {/* Left Column: Gallery & Info */}
-        <div className="lg:col-span-7 space-y-6">
+        <div className="xl:col-span-7 space-y-6 min-w-0">
           <ProductGallery product={product} />
 
           {/* Product Code & Basic Overview Card */}
@@ -106,7 +106,7 @@ export default function ProductPage() {
         </div>
 
         {/* Right Column: Complete Screenshot-Matching Order Form */}
-        <div className="lg:col-span-5 space-y-6">
+        <div className="xl:col-span-5 space-y-6 min-w-0">
           <ProductOrderForm
             product={product}
             onVariantSelect={(variantName) => setSelectedVariantName(variantName)}

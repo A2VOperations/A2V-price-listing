@@ -162,18 +162,47 @@ export default function ProductOrderForm({
               <span>Quantity</span>
             </div>
             <div className="flex items-center space-x-3">
-              <input
-                type="number"
-                min={minQty}
-                step={currentProduct.quantityStep || 100}
-                value={quantity}
-                onChange={(e) =>
-                  setQuantity(
-                    Math.max(minQty, parseInt(e.target.value, 10) || minQty)
-                  )
-                }
-                className="w-24 px-3 py-1.5 text-center font-bold text-slate-900 bg-white border border-slate-300 rounded focus:ring-2 focus:ring-blue-600 focus:outline-none"
-              />
+              <div className="flex items-center border border-slate-300 rounded-lg overflow-hidden bg-white shadow-2xs">
+                <button
+                  type="button"
+                  onClick={() =>
+                    setQuantity(
+                      Math.max(
+                        minQty,
+                        quantity - (currentProduct.quantityStep || 100)
+                      )
+                    )
+                  }
+                  className="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-800 font-black text-sm border-r border-slate-300 select-none active:bg-slate-300 transition-colors"
+                  aria-label="Decrease Quantity"
+                >
+                  -
+                </button>
+                <input
+                  type="number"
+                  min={minQty}
+                  step={currentProduct.quantityStep || 100}
+                  value={quantity}
+                  onChange={(e) =>
+                    setQuantity(
+                      Math.max(minQty, parseInt(e.target.value, 10) || minQty)
+                    )
+                  }
+                  className="w-20 px-2 py-1.5 text-center font-extrabold text-slate-900 bg-white focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                />
+                <button
+                  type="button"
+                  onClick={() =>
+                    setQuantity(
+                      quantity + (currentProduct.quantityStep || 100)
+                    )
+                  }
+                  className="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-800 font-black text-sm border-l border-slate-300 select-none active:bg-slate-300 transition-colors"
+                  aria-label="Increase Quantity"
+                >
+                  +
+                </button>
+              </div>
               <span className="text-xs font-semibold text-blue-600">
                 (Min Qty. : {minQty})
               </span>

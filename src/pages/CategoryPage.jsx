@@ -108,7 +108,7 @@ export default function CategoryPage() {
             return entries.map(([subCategoryName, prods]) => {
               let titleColor = "text-blue-800";
               let borderColor = "border-blue-600";
-              let gridCols = "grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6";
+              let gridCols = "grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5";
 
               if (subCategoryName.includes("500 GSM")) {
                 titleColor = "text-[#D97706]";
@@ -150,7 +150,7 @@ export default function CategoryPage() {
         </div>
       ) : (
         // Standard Grid Layout
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
           {filteredProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

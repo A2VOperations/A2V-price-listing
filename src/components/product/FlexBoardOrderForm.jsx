@@ -215,38 +215,74 @@ export default function FlexBoardOrderForm({ product, onVariantSelect }) {
           </span>
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="space-y-1">
             <label className="text-[11px] font-bold text-slate-700 block">
               Height (Feet)
             </label>
-            <input
-              type="number"
-              min="0.1"
-              step="0.5"
-              value={height}
-              onChange={(e) => setHeight(e.target.value)}
-              className="w-full px-3 py-2 text-xs font-bold text-slate-900 bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:bg-white focus:outline-none"
-            />
+            <div className="flex items-center border border-slate-300 rounded-lg overflow-hidden bg-slate-50 shadow-2xs">
+              <button
+                type="button"
+                onClick={() => setHeight(Math.max(0.5, Math.round(((Number(height) || 1) - 0.5) * 10) / 10))}
+                className="px-2.5 py-1.5 bg-slate-200/80 hover:bg-slate-300 text-slate-800 font-extrabold text-xs border-r border-slate-300 select-none active:bg-slate-400"
+                aria-label="Decrease Height"
+              >
+                -
+              </button>
+              <input
+                type="number"
+                min="0.1"
+                step="0.5"
+                value={height}
+                onChange={(e) => setHeight(e.target.value)}
+                className="w-full px-2 py-1.5 text-xs text-center font-bold text-slate-900 bg-slate-50 focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+              />
+              <button
+                type="button"
+                onClick={() => setHeight(Math.round(((Number(height) || 0) + 0.5) * 10) / 10)}
+                className="px-2.5 py-1.5 bg-slate-200/80 hover:bg-slate-300 text-slate-800 font-extrabold text-xs border-l border-slate-300 select-none active:bg-slate-400"
+                aria-label="Increase Height"
+              >
+                +
+              </button>
+            </div>
           </div>
 
           <div className="space-y-1">
             <label className="text-[11px] font-bold text-slate-700 block">
               Width (Feet)
             </label>
-            <input
-              type="number"
-              min="0.1"
-              step="0.5"
-              value={width}
-              onChange={(e) => setWidth(e.target.value)}
-              className="w-full px-3 py-2 text-xs font-bold text-slate-900 bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:bg-white focus:outline-none"
-            />
+            <div className="flex items-center border border-slate-300 rounded-lg overflow-hidden bg-slate-50 shadow-2xs">
+              <button
+                type="button"
+                onClick={() => setWidth(Math.max(0.5, Math.round(((Number(width) || 1) - 0.5) * 10) / 10))}
+                className="px-2.5 py-1.5 bg-slate-200/80 hover:bg-slate-300 text-slate-800 font-extrabold text-xs border-r border-slate-300 select-none active:bg-slate-400"
+                aria-label="Decrease Width"
+              >
+                -
+              </button>
+              <input
+                type="number"
+                min="0.1"
+                step="0.5"
+                value={width}
+                onChange={(e) => setWidth(e.target.value)}
+                className="w-full px-2 py-1.5 text-xs text-center font-bold text-slate-900 bg-slate-50 focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+              />
+              <button
+                type="button"
+                onClick={() => setWidth(Math.round(((Number(width) || 0) + 0.5) * 10) / 10)}
+                className="px-2.5 py-1.5 bg-slate-200/80 hover:bg-slate-300 text-slate-800 font-extrabold text-xs border-l border-slate-300 select-none active:bg-slate-400"
+                aria-label="Increase Width"
+              >
+                +
+              </button>
+            </div>
           </div>
         </div>
 
         {/* Live Flex Price Summary Banner */}
-        <div className="bg-blue-50/80 rounded-lg p-3 border border-blue-100 flex items-center justify-between text-xs">
+        <div className="bg-blue-50/80 rounded-lg p-3 border border-blue-100 flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 text-xs">
           <div className="flex items-center space-x-2 text-blue-950 font-medium">
             <FiInfo className="w-4 h-4 text-blue-600 flex-shrink-0" />
             <span>
@@ -261,12 +297,12 @@ export default function FlexBoardOrderForm({ product, onVariantSelect }) {
 
       {/* 3. BOARD STRUCTURE & RUNNING FEET CALCULATION */}
       <div className="bg-white rounded-xl border border-slate-200 p-4 space-y-4 shadow-xs">
-        <div className="flex items-center justify-between border-b border-slate-100 pb-2.5">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 pb-2.5">
           <span className="text-xs font-black text-slate-900 uppercase tracking-wider flex items-center gap-1.5">
             <FiTool className="w-4 h-4 text-blue-600" />
             3. Board Frame & Support Structure
           </span>
-          <span className="text-[11px] font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
+          <span className="text-[11px] font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 self-start sm:self-auto">
             {boardType === "None" ? "Not Required" : `₹${activeBoard.ratePerFt}/running ft`}
           </span>
         </div>
@@ -276,7 +312,7 @@ export default function FlexBoardOrderForm({ product, onVariantSelect }) {
           <label className="text-[11px] font-bold text-slate-700 block">
             Select Board Type
           </label>
-          <div className="grid grid-cols-3 gap-2">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
             {BOARD_TYPES.map((b) => (
               <button
                 type="button"
@@ -348,14 +384,30 @@ export default function FlexBoardOrderForm({ product, onVariantSelect }) {
                   <label className="text-[10px] font-bold text-slate-600 block">
                     Number of Rods
                   </label>
-                  <input
-                    type="number"
-                    min="1"
-                    max="10"
-                    value={supportRodCount}
-                    onChange={(e) => setSupportRodCount(Math.max(1, parseInt(e.target.value, 10) || 1))}
-                    className="w-full px-2 py-1.5 text-xs bg-white border border-slate-300 rounded font-bold text-center"
-                  />
+                  <div className="flex items-center border border-slate-300 rounded overflow-hidden bg-white">
+                    <button
+                      type="button"
+                      onClick={() => setSupportRodCount(Math.max(1, supportRodCount - 1))}
+                      className="px-2 py-1 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs border-r border-slate-300 select-none"
+                    >
+                      -
+                    </button>
+                    <input
+                      type="number"
+                      min="1"
+                      max="10"
+                      value={supportRodCount}
+                      onChange={(e) => setSupportRodCount(Math.max(1, parseInt(e.target.value, 10) || 1))}
+                      className="w-full px-1 py-1 text-xs bg-white text-center font-bold text-slate-900 focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => setSupportRodCount(supportRodCount + 1)}
+                      className="px-2 py-1 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs border-l border-slate-300 select-none"
+                    >
+                      +
+                    </button>
+                  </div>
                 </div>
 
                 {supportRodType === "Custom" && (
@@ -363,14 +415,30 @@ export default function FlexBoardOrderForm({ product, onVariantSelect }) {
                     <label className="text-[10px] font-bold text-slate-600 block">
                       Custom Length (Ft)
                     </label>
-                    <input
-                      type="number"
-                      min="0.5"
-                      step="0.5"
-                      value={customRodLength}
-                      onChange={(e) => setCustomRodLength(e.target.value)}
-                      className="w-full px-2 py-1.5 text-xs bg-white border border-slate-300 rounded font-bold text-center"
-                    />
+                    <div className="flex items-center border border-slate-300 rounded overflow-hidden bg-white">
+                      <button
+                        type="button"
+                        onClick={() => setCustomRodLength(Math.max(0.5, Math.round(((Number(customRodLength) || 1) - 0.5) * 10) / 10))}
+                        className="px-2 py-1 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs border-r border-slate-300 select-none"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        min="0.5"
+                        step="0.5"
+                        value={customRodLength}
+                        onChange={(e) => setCustomRodLength(e.target.value)}
+                        className="w-full px-1 py-1 text-xs bg-white text-center font-bold text-slate-900 focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => setCustomRodLength(Math.round(((Number(customRodLength) || 0) + 0.5) * 10) / 10)}
+                        className="px-2 py-1 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs border-l border-slate-300 select-none"
+                      >
+                        +
+                      </button>
+                    </div>
                   </div>
                 )}
               </div>
@@ -493,14 +561,30 @@ export default function FlexBoardOrderForm({ product, onVariantSelect }) {
             </button>
             {hasAnglePatti === "Yes" && (
               <div className="flex items-center space-x-1 pl-2">
-                <input
-                  type="number"
-                  min="1"
-                  max="50"
-                  value={anglePattiCount}
-                  onChange={(e) => setAnglePattiCount(Math.max(1, parseInt(e.target.value, 10) || 1))}
-                  className="w-16 px-2 py-1 text-center font-bold bg-white border border-slate-300 rounded"
-                />
+                <div className="flex items-center border border-slate-300 rounded overflow-hidden bg-white">
+                  <button
+                    type="button"
+                    onClick={() => setAnglePattiCount(Math.max(1, anglePattiCount - 1))}
+                    className="px-2 py-1 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs border-r border-slate-300 select-none"
+                  >
+                    -
+                  </button>
+                  <input
+                    type="number"
+                    min="1"
+                    max="50"
+                    value={anglePattiCount}
+                    onChange={(e) => setAnglePattiCount(Math.max(1, parseInt(e.target.value, 10) || 1))}
+                    className="w-12 px-1 py-1 text-center font-bold bg-white text-xs focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setAnglePattiCount(anglePattiCount + 1)}
+                    className="px-2 py-1 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs border-l border-slate-300 select-none"
+                  >
+                    +
+                  </button>
+                </div>
                 <span className="text-[11px] font-bold text-blue-600">Unit(s)</span>
               </div>
             )}
@@ -508,18 +592,36 @@ export default function FlexBoardOrderForm({ product, onVariantSelect }) {
         </div>
 
         {/* Quantity Row */}
-        <div className="p-3.5 sm:px-4 flex items-center justify-between">
+        <div className="p-3.5 sm:px-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div className="flex items-center space-x-2 font-bold text-slate-900">
             <FiPackage className="w-4 h-4 text-blue-600 flex-shrink-0" />
             <span>Total Boards Quantity</span>
           </div>
-          <input
-            type="number"
-            min="1"
-            value={quantity}
-            onChange={(e) => setQuantity(Math.max(1, parseInt(e.target.value, 10) || 1))}
-            className="w-24 px-3 py-1.5 text-center font-extrabold text-slate-900 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:outline-none"
-          />
+          <div className="flex items-center border border-slate-300 rounded-lg overflow-hidden bg-white shadow-2xs">
+            <button
+              type="button"
+              onClick={() => setQuantity(Math.max(1, quantity - 1))}
+              className="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-800 font-black text-sm border-r border-slate-300 select-none active:bg-slate-300 transition-colors"
+              aria-label="Decrease Quantity"
+            >
+              -
+            </button>
+            <input
+              type="number"
+              min="1"
+              value={quantity}
+              onChange={(e) => setQuantity(Math.max(1, parseInt(e.target.value, 10) || 1))}
+              className="w-20 px-2 py-1.5 text-center font-extrabold text-slate-900 bg-white focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+            />
+            <button
+              type="button"
+              onClick={() => setQuantity(quantity + 1)}
+              className="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-800 font-black text-sm border-l border-slate-300 select-none active:bg-slate-300 transition-colors"
+              aria-label="Increase Quantity"
+            >
+              +
+            </button>
+          </div>
         </div>
       </div>
 
