@@ -590,38 +590,5 @@ export const files = [
         },
       },
     },
-    minQuantity: 500,
-    quantityStep: 500,
-    productionTime: "2 Working days",
-    basePrice: 1500,
-    unitName: "Clips",
-    pricingModel: "quantity_tiered",
-    quantityPricingTiers: [
-      { minQty: 500, pricePerUnit: 3.0 },
-      { minQty: 1000, pricePerUnit: 2.5 },
-    ],
-    ourSpecialization: [
-      "Innovative, Advanced & Equipped Post Printing Unit",
-      "Constant quality with reasonable price",
-    ],
-    productSpecialization: [
-      "Available in 3 Varieties.",
-      "Dispatch Time: 2 Working days.",
-    ],
-    specifications: {
-      "Product Code": "FL-005",
-      Material: "PVC Plastic Clip",
-      Varieties: "Available in 3 Varieties",
-      "Dispatch Time": "2 Working days",
-      "Production Time": "2 Working days",
-    },
-    importantNotes: ["Compatible with standard presentation files."],
-    fileRequirements: {
-      formats: ["N/A"],
-      minDpi: 300,
-      bleed: "0 mm",
-      safeArea: "0 mm",
-    },
-    options: [commonOptions.fileOption],
   },
 ];
