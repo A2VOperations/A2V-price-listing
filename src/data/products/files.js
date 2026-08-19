@@ -12,6 +12,21 @@ export const files = [
     badge: "NEW",
     description:
       '300 Micron PP Sheet presentation file in Small Size (9"x12").',
+    ourSpecialization: [
+      "B2B Exclusive: Serving only printing presses, no direct sales to customers.",
+      "Real-Time Order Tracking: Full transparency with online tracking.",
+      "Fast & Reliable Service: Competitive pricing with quick turnaround.",
+      "Advanced Technology: Specialists in file printing with LED technology for superior quality.",
+    ],
+    productSpecialization: [
+      "Scratch-Resistant LED Inks: Ensuring a flawless and long-lasting finish.",
+      "Premium Quality PP Material: Durable and designed for superior strength.",
+      "Printing using the latest Komori offset machines (2023 model)",
+      "Eco-Friendly Printing: Sustainable processes that are gentle on the environment.",
+    ],
+    importantNotes: [
+      'Please note that the "PVC Clip" is not included with this order. To purchase it, kindly place a separate order. Due to packaging limitations, the clip will not be attached to the doctor\'s file and will be delivered separately.',
+    ],
     variantCombinations: [
       "PVC File (Gloss Coated, Small Size)",
       "PVC File (Without Coated - Matt Finish, Small Size)",
@@ -19,16 +34,25 @@ export const files = [
     variantDetails: {
       "PVC File (Gloss Coated, Small Size)": {
         code: "FL-1-A",
+        minQuantity: 1000,
+        quantityStep: 1000,
+        productionTime: "3 Working Days",
+        unitName: "Files",
         basePrice: 3500,
+        pricingModel: "quantity_tiered",
+        quantityPricingTiers: [
+          { minQty: 1000, pricePerUnit: 3.5 },
+          { minQty: 2000, pricePerUnit: 3.0 },
+        ],
         specifications: {
-          "Product Ref.": "FILE/1st Edition (Sample File)",
-          "Product Code": "FL-1-A",
-          "Product Class": "Premium",
-          "Product Core": "Gloss Coated PP Sheet",
-          Material: '300 Micron PP Sheet, 9"x12"',
-          Size: '9" x 12" (Small Size)',
-          "Production Time": "3 Working days",
-          "Coated Type": "Gloss Coated",
+          "Size (In inch)": '9"x12"',
+          "Lamination Type": "Gloss Coated",
+          "Pocket Option": "Not Available",
+          "Production Time": "3 Working Days",
+          "Paper Quality": "300 Micron PP Sheet",
+          "Number of creases at the center fold": "One",
+          "Product Ref.": "DF-1/2nd Edition (Sample File)",
+          Uses: "For Doctor Files, Hospital Use and Corporate Purposes",
         },
         options: [
           {
@@ -48,16 +72,25 @@ export const files = [
       },
       "PVC File (Without Coated - Matt Finish, Small Size)": {
         code: "FL-1-B",
+        minQuantity: 1000,
+        quantityStep: 1000,
+        productionTime: "3 Working Days",
+        unitName: "Files",
         basePrice: 3500,
+        pricingModel: "quantity_tiered",
+        quantityPricingTiers: [
+          { minQty: 1000, pricePerUnit: 3.5 },
+          { minQty: 2000, pricePerUnit: 3.0 },
+        ],
         specifications: {
-          "Product Ref.": "FILE/1st Edition (Sample File)",
-          "Product Code": "FL-1-B",
-          "Product Class": "Premium",
-          "Product Core": "Matt Finish PP Sheet",
-          Material: '300 Micron PP Sheet, 9"x12"',
-          Size: '9" x 12" (Small Size)',
-          "Production Time": "3 Working days",
-          "Coated Type": "Matt Finish (Without Coated)",
+          "Size (In inch)": '9"x12"',
+          Lamination: "Matt Finish (No Lamination)",
+          "Pocket Option": "Not Available",
+          "Production Time": "3 Working Days",
+          "Paper Quality": "300 Micron PP Sheet",
+          "Number of creases at the center fold": "One",
+          "Product Ref.": "DF-2/2nd Edition (Sample File)",
+          Uses: "For Doctor Files, Hospital Use and Corporate Purposes",
         },
         options: [
           {
@@ -98,6 +131,21 @@ export const files = [
     badge: "NEW",
     description:
       '300 Micron PP Sheet presentation file in Big Size (9.5"x12.5").',
+    ourSpecialization: [
+      "B2B Exclusive: Serving only printing presses, no direct sales to customers.",
+      "Real-Time Order Tracking: Full transparency with online tracking.",
+      "Fast & Reliable Service: Competitive pricing with quick turnaround.",
+      "Advanced Technology: Specialists in file printing with LED technology for superior quality.",
+    ],
+    productSpecialization: [
+      "Scratch-Resistant LED Inks: Ensuring a flawless and long-lasting finish.",
+      "Premium Quality PP Material: Durable and designed for superior strength.",
+      "Printing using the latest Komori offset machines (2023 model)",
+      "Eco-Friendly Printing: Sustainable processes that are gentle on the environment.",
+    ],
+    importantNotes: [
+      'Please note that the PVC file clip is not included with this order. To purchase it, kindly place a separate order. Due to packaging limitations, the clip will not be attached to the doctor\'s file and will be delivered separately.',
+    ],
     variantCombinations: [
       "PVC File (Gloss Coated, Big Size)",
       "PVC File (Without Coated - Matt Finish, Big Size)",
@@ -105,16 +153,25 @@ export const files = [
     variantDetails: {
       "PVC File (Gloss Coated, Big Size)": {
         code: "FL-2-A",
-        basePrice: 4000,
+        minQuantity: 1000,
+        quantityStep: 1000,
+        productionTime: "4 Working Days",
+        unitName: "Files",
+        basePrice: 3500,
+        pricingModel: "quantity_tiered",
+        quantityPricingTiers: [
+          { minQty: 1000, pricePerUnit: 3.5 },
+          { minQty: 2000, pricePerUnit: 3.0 },
+        ],
         specifications: {
-          "Product Ref.": "FILE/1st Edition (Sample File)",
-          "Product Code": "FL-2-A",
-          "Product Class": "Premium",
-          "Product Core": "Gloss Coated PP Sheet",
-          Material: '300 Micron PP Sheet, 9.5"x12.5"',
-          Size: '9.5" x 12.5" (Big Size)',
-          "Production Time": "4 Working days",
-          "Coated Type": "Gloss Coated",
+          "Size (In inch)": '9.5"x12.5"',
+          "Lamination Type": "Gloss Coated",
+          "Pocket Option": "Available",
+          "Production Time": "4 Working Days",
+          "Paper Quality": "300 Micron PP Sheet",
+          "Number of creases at the center fold": "Two",
+          "Product Ref.": "DF-3/2nd Edition (Sample File)",
+          Uses: "For Doctor Files, Hospital Use and Corporate Purposes",
         },
         options: [
           {
@@ -146,16 +203,25 @@ export const files = [
       },
       "PVC File (Without Coated - Matt Finish, Big Size)": {
         code: "FL-2-B",
-        basePrice: 4000,
+        minQuantity: 1000,
+        quantityStep: 1000,
+        productionTime: "4 Working Days",
+        unitName: "Files",
+        basePrice: 3500,
+        pricingModel: "quantity_tiered",
+        quantityPricingTiers: [
+          { minQty: 1000, pricePerUnit: 3.5 },
+          { minQty: 2000, pricePerUnit: 3.0 },
+        ],
         specifications: {
-          "Product Ref.": "FILE/1st Edition (Sample File)",
-          "Product Code": "FL-2-B",
-          "Product Class": "Premium",
-          "Product Core": "Matt Finish PP Sheet",
-          Material: '300 Micron PP Sheet, 9.5"x12.5"',
-          Size: '9.5" x 12.5" (Big Size)',
-          "Production Time": "4 Working days",
-          "Coated Type": "Matt Finish (Without Coated)",
+          "Size (In inch)": '9.5"x12.5"',
+          Lamination: "Matt Finish (No Lamination)",
+          "Pocket Option": "Available",
+          "Production Time": "4 Working Days",
+          "Paper Quality": "300 Micron PP Sheet",
+          "Number of creases at the center fold": "Two",
+          "Product Ref.": "DF-4/2nd Edition (Sample File)",
+          Uses: "For Doctor Files, Hospital Use and Corporate Purposes",
         },
         options: [
           {
@@ -206,6 +272,19 @@ export const files = [
     slug: "sbs-file-small-size",
     image: "/products/files/sbs-file-small.jpg",
     description: '260 Gsm SBS Paper presentation file in Small Size (9"x12").',
+    ourSpecialization: [
+      "B2B Exclusive: Serving only printing presses, no direct sales to customers.",
+      "Real-Time Order Tracking: Full transparency with online tracking.",
+      "Fast & Reliable Service: Competitive pricing with quick turnaround.",
+      "Advanced Technology",
+    ],
+    productSpecialization: [
+      "Printing using the latest Komori offset machines (2024 model)",
+      "Eco-Friendly Printing: Sustainable processes that are gentle on the environment.",
+    ],
+    importantNotes: [
+      'Please note that the PVC file clip is not included with this order. To purchase it, kindly place a separate order. Due to packaging limitations, the clip will not be attached to the doctor\'s file and will be delivered separately.',
+    ],
     variantCombinations: [
       "SBS File (Gloss Lamination, Small Size)",
       "SBS File (Matt Lamination, Small Size)",
@@ -213,16 +292,25 @@ export const files = [
     variantDetails: {
       "SBS File (Gloss Lamination, Small Size)": {
         code: "FL-3-A",
-        basePrice: 3250,
+        minQuantity: 1000,
+        quantityStep: 1000,
+        productionTime: "3 Working Days",
+        unitName: "Files",
+        basePrice: 3500,
+        pricingModel: "quantity_tiered",
+        quantityPricingTiers: [
+          { minQty: 1000, pricePerUnit: 3.5 },
+          { minQty: 2000, pricePerUnit: 3.0 },
+        ],
         specifications: {
-          "Product Ref.": "FILE/1st Edition (Sample File)",
-          "Product Code": "FL-3-A",
-          "Product Class": "Premium",
-          "Product Core": "Gloss Lamination SBS Board",
-          Paper: "260 Gsm SBS Paper",
-          Size: '9" x 12" (Small Size)',
-          "Production Time": "3 Working days",
-          Lamination: "Gloss Lamination",
+          "Size (In inch)": '9"x12"',
+          "Lamination Type": "Gloss Lamination",
+          "Pocket Option": "Not Available",
+          "Production Time": "3 Working Days",
+          "Paper Quality": "260 Gsm SBS Paper",
+          "Number of creases at the center fold": "One",
+          "Product Ref.": "DF-5/2nd Edition (Sample File)",
+          Uses: "For Doctor Files, Hospital Use and Corporate Purposes",
         },
         options: [
           {
@@ -242,16 +330,25 @@ export const files = [
       },
       "SBS File (Matt Lamination, Small Size)": {
         code: "FL-3-B",
-        basePrice: 3250,
+        minQuantity: 1000,
+        quantityStep: 1000,
+        productionTime: "3 Working Days",
+        unitName: "Files",
+        basePrice: 3500,
+        pricingModel: "quantity_tiered",
+        quantityPricingTiers: [
+          { minQty: 1000, pricePerUnit: 3.5 },
+          { minQty: 2000, pricePerUnit: 3.0 },
+        ],
         specifications: {
-          "Product Ref.": "FILE/1st Edition (Sample File)",
-          "Product Code": "FL-3-B",
-          "Product Class": "Premium",
-          "Product Core": "Matt Lamination SBS Board",
-          Paper: "260 Gsm SBS Paper",
-          Size: '9" x 12" (Small Size)',
-          "Production Time": "3 Working days",
-          Lamination: "Matt Lamination",
+          "Size (In inch)": '9"x12"',
+          "Lamination Type": "Matt Lamination",
+          "Pocket Option": "Not Available",
+          "Production Time": "3 Working Days",
+          "Paper Quality": "260 Gsm SBS Paper",
+          "Number of creases at the center fold": "One",
+          "Product Ref.": "DF-6/2nd Edition (Sample File)",
+          Uses: "For Doctor Files, Hospital Use and Corporate Purposes",
         },
         options: [
           {
@@ -291,6 +388,19 @@ export const files = [
     image: "/products/files/sbs-file-big.jpg",
     description:
       '320 Gsm SBS Paper presentation file in Big Size (9.5"x12.5").',
+    ourSpecialization: [
+      "B2B Exclusive: Serving only printing presses, no direct sales to customers.",
+      "Real-Time Order Tracking: Full transparency with online tracking.",
+      "Fast & Reliable Service: Competitive pricing with quick turnaround.",
+      "Advanced Technology",
+    ],
+    productSpecialization: [
+      "Printing using the latest Komori offset machines (2024 model)",
+      "Eco-Friendly Printing: Sustainable processes that are gentle on the environment.",
+    ],
+    importantNotes: [
+      'Please note that the PVC file clip is not included with this order. To purchase it, kindly place a separate order. Due to packaging limitations, the clip will not be attached to the doctor\'s file and will be delivered separately.',
+    ],
     variantCombinations: [
       "SBS File (Gloss Lamination, Big Size)",
       "SBS File (Matt Lamination, Big Size)",
@@ -298,16 +408,25 @@ export const files = [
     variantDetails: {
       "SBS File (Gloss Lamination, Big Size)": {
         code: "FL-4-A",
-        basePrice: 3750,
+        minQuantity: 1000,
+        quantityStep: 1000,
+        productionTime: "4 Working Days",
+        unitName: "Files",
+        basePrice: 3500,
+        pricingModel: "quantity_tiered",
+        quantityPricingTiers: [
+          { minQty: 1000, pricePerUnit: 3.5 },
+          { minQty: 2000, pricePerUnit: 3.0 },
+        ],
         specifications: {
-          "Product Ref.": "FILE/1st Edition (Sample File)",
-          "Product Code": "FL-4-A",
-          "Product Class": "Premium",
-          "Product Core": "Gloss Lamination SBS Board",
-          Paper: "320 Gsm SBS Paper",
-          Size: '9.5" x 12.5" (Big Size)',
-          "Production Time": "4 Working days",
-          Lamination: "Gloss Lamination",
+          "Size (In inch)": '9.5"x12.5"',
+          "Lamination Type": "Gloss Lamination",
+          "Pocket Option": "Available",
+          "Production Time": "4 Working Days",
+          "Paper Quality": "320 Gsm SBS Paper",
+          "Number of creases at the center fold": "Two",
+          "Product Ref.": "DF-7/2nd Edition (Sample File)",
+          Uses: "For Doctor Files, Hospital Use and Corporate Purposes",
         },
         options: [
           {
@@ -340,16 +459,25 @@ export const files = [
       },
       "SBS File (Matt Lamination, Big Size)": {
         code: "FL-4-B",
-        basePrice: 3750,
+        minQuantity: 1000,
+        quantityStep: 1000,
+        productionTime: "4 Working Days",
+        unitName: "Files",
+        basePrice: 3500,
+        pricingModel: "quantity_tiered",
+        quantityPricingTiers: [
+          { minQty: 1000, pricePerUnit: 3.5 },
+          { minQty: 2000, pricePerUnit: 3.0 },
+        ],
         specifications: {
-          "Product Ref.": "FILE/1st Edition (Sample File)",
-          "Product Code": "FL-4-B",
-          "Product Class": "Premium",
-          "Product Core": "Matt Lamination SBS Board",
-          Paper: "320 Gsm SBS Paper",
-          Size: '9.5" x 12.5" (Big Size)',
-          "Production Time": "4 Working days",
-          Lamination: "Matt Lamination",
+          "Size (In inch)": '9.5"x12.5"',
+          "Lamination Type": "Matt Lamination",
+          "Pocket Option": "Available",
+          "Production Time": "4 Working Days",
+          "Paper Quality": "320 Gsm SBS Paper",
+          "Number of creases at the center fold": "Two",
+          "Product Ref.": "DF-8/2nd Edition (Sample File)",
+          Uses: "For Doctor Files, Hospital Use and Corporate Purposes",
         },
         options: [
           {
@@ -389,40 +517,6 @@ export const files = [
         ],
       },
     },
-    minQuantity: 250,
-    quantityStep: 250,
-    productionTime: "4 Working days",
-    basePrice: 3750,
-    unitName: "Files",
-    pricingModel: "quantity_tiered",
-    quantityPricingTiers: [
-      { minQty: 250, pricePerUnit: 15.0 },
-      { minQty: 500, pricePerUnit: 12.5 },
-    ],
-    ourSpecialization: [
-      "Printing with latest Komori offset machines (2023 Model)",
-      "Innovative, Advanced & Equipped Post Printing Unit",
-      "Constant quality with reasonable price",
-    ],
-    productSpecialization: [
-      'Material: 320 Gsm SBS Paper (Big Size: 9.5"x12.5").',
-      "Heavy duty 320 GSM SBS board folder with gloss or matt finish.",
-      "4 Working Days turnaround time.",
-    ],
-    specifications: {
-      "Product Code": "FL-004",
-      Material: '320 Gsm SBS Paper, 9.5"x12.5"',
-      Size: '9.5" x 12.5" (Big Size)',
-      "Production Time": "4 Working days",
-    },
-    importantNotes: ["Heavy duty 320 GSM SBS board with gloss/matt finish."],
-    fileRequirements: {
-      formats: ["PDF", "AI", "CDR"],
-      minDpi: 300,
-      bleed: "3 mm",
-      safeArea: "5 mm",
-    },
-    options: [commonOptions.printing, commonOptions.fileOption],
   },
   {
     id: "FL-005",
@@ -437,7 +531,16 @@ export const files = [
     variantDetails: {
       "Type - 1": {
         code: "FL-5-A",
-        basePrice: 1500,
+        minQuantity: 1000,
+        quantityStep: 1000,
+        productionTime: "3 Days",
+        unitName: "Files",
+        basePrice: 3500,
+        pricingModel: "quantity_tiered",
+        quantityPricingTiers: [
+          { minQty: 1000, pricePerUnit: 3.5 },
+          { minQty: 2000, pricePerUnit: 3.0 },
+        ],
         specifications: {
           "Product Code": "FL-5-A",
           Type: "Type - 1",
@@ -448,7 +551,16 @@ export const files = [
       },
       "Type - 2": {
         code: "FL-5-B",
-        basePrice: 1500,
+        minQuantity: 1000,
+        quantityStep: 1000,
+        productionTime: "3 Days",
+        unitName: "Files",
+        basePrice: 3500,
+        pricingModel: "quantity_tiered",
+        quantityPricingTiers: [
+          { minQty: 1000, pricePerUnit: 3.5 },
+          { minQty: 2000, pricePerUnit: 3.0 },
+        ],
         specifications: {
           "Product Code": "FL-5-B",
           Type: "Type - 2",
@@ -459,7 +571,16 @@ export const files = [
       },
       "Type - 3": {
         code: "FL-5-C",
-        basePrice: 1500,
+        minQuantity: 1000,
+        quantityStep: 1000,
+        productionTime: "3 Days",
+        unitName: "Files",
+        basePrice: 3500,
+        pricingModel: "quantity_tiered",
+        quantityPricingTiers: [
+          { minQty: 1000, pricePerUnit: 3.5 },
+          { minQty: 2000, pricePerUnit: 3.0 },
+        ],
         specifications: {
           "Product Code": "FL-5-C",
           Type: "Type - 3",

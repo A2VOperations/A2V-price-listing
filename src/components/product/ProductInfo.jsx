@@ -53,7 +53,7 @@ export default function ProductInfo({ product }) {
                     className="flex justify-between items-center p-2.5 bg-slate-50 rounded-lg border border-slate-100 gap-2"
                   >
                     <span className="capitalize text-slate-500 font-medium shrink-0">
-                      {key.replace(/([A-Z])/g, " $1")}
+                      {key.includes(" ") ? key : key.replace(/([A-Z])/g, " $1").trim()}
                     </span>
                     <span className="font-bold text-slate-900 text-right">{val}</span>
                   </div>
