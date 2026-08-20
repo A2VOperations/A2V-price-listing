@@ -1050,7 +1050,18 @@ export const visitingCards = [
       safeArea: "W: 82.00 mm X H: 45.00 mm",
       finalSize: "W: 90.00 mm x H: 53.00 mm",
     },
-    options: [commonOptions.printing],
+    options: [
+      {
+        id: "printing",
+        name: "Printing",
+        type: "select",
+        required: true,
+        values: [
+          { label: "Both Side", priceAdjustment: 200 },
+          { label: "Front Side", priceAdjustment: 0 },
+        ],
+      },
+    ],
   },
   {
     id: "VC-016",
@@ -1989,7 +2000,18 @@ export const visitingCards = [
           "India's #1 Choice: Reliable, consistent quality backed by industry-leading expertise.",
           "Flexible Options: Both-side printing available to maximize your brand space.",
         ],
-        options: [commonOptions.printing],
+        options: [
+          {
+            id: "printing",
+            name: "Printing",
+            type: "select",
+            required: true,
+            values: [
+              { label: "Both Side", priceAdjustment: 200 },
+              { label: "Front Side", priceAdjustment: 0 },
+            ],
+          },
+        ],
       },
       "180 Micron NT Card + Gloss UV Coating": {
         code: "VC-12-B",
@@ -2003,7 +2025,18 @@ export const visitingCards = [
           "Production Time": "2 days",
           "Lamination Type": "N/A",
         },
-        options: [commonOptions.printing],
+        options: [
+          {
+            id: "printing",
+            name: "Printing",
+            type: "select",
+            required: true,
+            values: [
+              { label: "Both Side", priceAdjustment: 200 },
+              { label: "Front Side", priceAdjustment: 0 },
+            ],
+          },
+        ],
       },
       "180 Micron NT Card + Drip-Off": {
         code: "VC-12-C",

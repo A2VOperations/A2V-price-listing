@@ -66,10 +66,10 @@ export default function ProductCard({ product }) {
       >
         {/* Top Graphic Solid Square Block Header */}
         <div
-          className={`relative h-28 w-full rounded-md ${currentTheme.header} flex items-center justify-center p-2 shadow-xs border overflow-hidden`}
+          className={`relative h-30 w-full rounded-md ${currentTheme.header} flex items-center justify-center p-2 shadow-xs border overflow-hidden`}
         >
           {/* Subtle sheen */}
-          <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-linear-to-b from-white/10 to-transparent pointer-events-none" />
 
           {/* Badge Ribbon */}
           {badge && (
@@ -78,7 +78,7 @@ export default function ProductCard({ product }) {
             </div>
           )}
 
-          <h3 className="text-white font-black text-xs sm:text-sm tracking-wide uppercase leading-tight text-center drop-shadow-xs whitespace-pre-line">
+          <h3 className="text-white font-black text-xs sm:text-lg tracking-wide uppercase leading-tight text-center drop-shadow-xs whitespace-pre-line">
             {headerTitle}
           </h3>
         </div>

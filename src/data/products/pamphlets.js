@@ -1,3 +1,5 @@
+import pamphletImage from "../../assets/images/categories (18).webp";
+import posterImage from "../../assets/images/categories (19).webp";
 
 export const pamphlets = [
   {
@@ -7,7 +9,7 @@ export const pamphlets = [
     subCategory: "PAMPHLET",
     name: "PAMPHLET",
     slug: "pamphlet",
-    image: "/products/pamphlets-posters/pamphlet.jpg",
+    image: pamphletImage,
     description:
       "High-volume full color offset printed promotional pamphlets available in Maplitho and Art Paper options.",
     variantCombinations: [
@@ -339,7 +341,7 @@ export const pamphlets = [
     subCategory: "POSTER",
     name: "POSTER",
     slug: "poster",
-    image: "/products/pamphlets-posters/poster.jpg",
+    image: posterImage,
     description:
       "High-impact full color promotional posters available in various standard sizes.",
     variantCombinations: [

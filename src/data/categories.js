@@ -10,16 +10,16 @@ import atmPouch from "../assets/images/categories (3).webp";
 import billBook from "../assets/images/categories (8).webp";
 import stickers from "../assets/images/categories (9).webp";
 import pens from "../assets/images/categories (4).webp";
-import shootingTarget from "../assets/images/categories (12).webp";
-import sampleFiles from "../assets/images/categories (10).webp";
+import flexBoard from "../assets/images/categories (14).webp";
 
 export const categories = [
   {
     id: "flex-board",
     slug: "flex-board",
     name: "Flex Board",
-    image: stacked_poster,
-    description: "Custom Flex Board printing & framing calculator with Iron/Wooden structure options, support rods & installation.",
+    image: flexBoard,
+    description:
+      "Custom Flex Board printing & framing calculator with Iron/Wooden structure options, support rods & installation.",
   },
   {
     id: "visiting-cards",

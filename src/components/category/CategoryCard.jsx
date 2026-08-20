@@ -10,7 +10,7 @@ export default function CategoryCard({ category }) {
       className="group bg-white rounded-xl border border-slate-200/80 shadow-xs hover:shadow-md hover:border-blue-400 transition-all duration-200 flex flex-col overflow-hidden"
     >
       {/* Category Image Preview Container */}
-      <div className="h-36 w-full bg-slate-100 relative overflow-hidden">
+      <div className="h-40 w-full bg-slate-100 relative overflow-hidden">
         <ProductImage
           src={category.image}
           alt={category.name}

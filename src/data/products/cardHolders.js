@@ -1,3 +1,6 @@
+import horizontal from "../../assets/images/categories (16).webp";
+import vertical from "../../assets/images/categories (17).webp";
+
 export const cardHolders = [
   {
     id: "CH-001",
@@ -6,7 +9,7 @@ export const cardHolders = [
     subCategory: "HORIZONTAL LASER PRINTED",
     name: "Horizontal Laser Printed Card Holders",
     slug: "horizontal-laser-printed-card-holders",
-    image: "/products/card-holders/horizontal-leatherette-holder.jpg",
+    image: horizontal,
     description:
       "Executive horizontal metal & leatherette visiting card case with custom laser printing. Ideal for Corporate Gifting, Business Meetings, & Top Management Use. Perfect for Brand Promotion & Premium Client Presentation.",
     variantCombinations: ["Horizontal Laser Printed Card Holders"],
@@ -60,7 +63,7 @@ export const cardHolders = [
     subCategory: "VERTICAL LASER PRINTED",
     name: "Vertical Laser Printed Card Holders",
     slug: "vertical-laser-printed-card-holders",
-    image: "/products/card-holders/vertical-leatherette-holder.jpg",
+    image: vertical,
     description:
       "Executive vertical metal & leatherette visiting card case with custom laser printing. Ideal for Corporate Gifting, Business Meetings, & Top Management Use. Perfect for Brand Promotion & Premium Client Presentation.",
     variantCombinations: ["Vertical Laser Printed Card Holders"],
